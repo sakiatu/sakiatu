@@ -31,8 +31,7 @@ function HomeContent() {
           'xl:w-[1240px]'
         )}
       >
-        <div className="relative">
-          {/* <div className="size-40 bg-white absolute -top-3 right-0"></div> */}
+        <div className="relative overflow-x-hidden lg:overflow-x-visible">
           <BgText className="top-30 -left-20">Sakib</BgText>
           <BgText className="bottom-20 left-30">Ahmed</BgText>
           <Image
@@ -43,7 +42,7 @@ function HomeContent() {
             className="object-contain object-bottom xl:object-contain"
           />
         </div>
-        <div className="flex flex-col bg-violet-200 items-center py-32 lg:bg-white lg:py-0 lg:items-end lg:justify-end lg:pb-40 xl:justify-normal xl:pb-0 gap-16">
+        <div className="flex flex-col bg-violet-200 items-center py-32 lg:bg-transparent lg:py-0 lg:items-end lg:justify-end lg:pb-40 xl:justify-normal xl:pb-0 gap-16">
           <NavLinks />
 
           <Intro />
@@ -122,7 +121,7 @@ function ContactButtons() {
       <Link href={YOUTUBE_LINK} target="_blank">
         <Image src={youtubeIcon} alt="github icon" width={48} height={33} />
       </Link>
-      <Link href={'mail://' + GMAIL} target="_blank">
+      <Link href={'mailto://' + GMAIL} target="_blank">
         <Image src={mailIcon} alt="github icon" width={40} height={30} />
       </Link>
     </div>
