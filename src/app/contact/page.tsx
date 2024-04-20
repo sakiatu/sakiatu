@@ -19,7 +19,7 @@ const contacts: Contact[] = [
   { icon: githubIcon, name: 'Github', link: GITHUB_LINK },
   { icon: facebookIcon, name: 'Facebook', link: FACEBOOK_LINK },
   { icon: youtubeIcon, name: 'Youtube', link: YOUTUBE_LINK },
-  { icon: mailIcon, name: 'Mail', link: GMAIL },
+  { icon: mailIcon, name: 'Mail', link: 'mailto://' + GMAIL },
 ];
 
 export default function ContactPage() {
