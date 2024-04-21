@@ -1,4 +1,3 @@
-import BgText from '@/components/BgText';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import githubIcon from '@/assets/github.svg';
@@ -38,7 +37,7 @@ function SkillsContent() {
 
 function SkillItem({ name, expertise }: Skill) {
   return (
-    <div className="flex gap-8 items-center px-8 py-10 bg-white/50 backdrop-blur border drop-shadow-md rounded-lg">
+    <div className="flex gap-8 items-center px-8 py-10 bg-white/50 border drop-shadow-md rounded-lg">
       <Image src={githubIcon} width={40} height={40} alt="list-item" />
 
       <div className="space-y-1">

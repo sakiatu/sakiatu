@@ -49,7 +49,7 @@ function ContactItem({ icon, name, link }: Contact) {
     <Link
       href={link}
       target="_blank"
-      className="flex gap-12 items-center px-8 py-10 bg-white/50 hover:bg-gray-100/50 backdrop-blur border drop-shadow-md rounded-xl"
+      className="flex gap-12 items-center px-8 py-10 bg-white/50 hover:bg-gray-100/50 border drop-shadow-md rounded-xl"
     >
       <Image src={icon} width={40} height={40} alt="list-item" />
 
