@@ -32,7 +32,7 @@ const skills: Skill[] = [
 
 export default function SkillsSection() {
   return (
-    <div className="bg-black">
+    <div className="bg-black" id="skills">
       <div
         className={cn(
           'grid grid-rows-[auto_1fr] grid-cols-1 lg:grid-cols-[auto_1fr] gap-y-16 lg:gap-x-8',
@@ -56,7 +56,7 @@ export default function SkillsSection() {
 function Header() {
   return (
     <div className="font-black text-4xl" style={{ gridArea: 'header' }}>
-      <span className="text-violet-400">Specialist</span> in Flutter Technology
+      Specialist in <span className="text-violet-400">Flutter</span> & Android
     </div>
   );
 }
