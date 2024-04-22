@@ -18,6 +18,7 @@ export default function HeroSection() {
 
   return (
     <div
+      id="home"
       className={cn(
         'grid mx-auto h-full uppercase pt-16',
         'lg:grid-cols-[1fr_auto] lg:w-[1000px]',
