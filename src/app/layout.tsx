@@ -27,11 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn('font-sans relative overflow-x-hidden', fontSans.variable, fontBG.variable)}
-      >
-        {children}
-      </body>
+      <body className={cn('font-sans', fontSans.variable, fontBG.variable)}>{children}</body>
     </html>
   );
 }

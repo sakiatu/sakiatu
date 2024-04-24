@@ -1,24 +1,24 @@
-import Navbar from '@/components/Navbar';
-import HeroSection from './_comps/HeroSection';
-import SkillsSection from './_comps/SkillsSection';
-import ProjectsSection from './_comps/ProjectsSection';
-import YoutubeSection from './_comps/YoutubeSection';
-import ContactSection from './_comps/ContactSection';
+import Navbar from './_comps/Navbar';
+import SectionContacts from './_comps/SectionContacts';
+import SectionHome from './_comps/SectionHome';
+import SectionProjects from './_comps/SectionProjects';
+import SectionSkills from './_comps/SectionSkills';
+import SectionYoutube from './_comps/SectionYoutube';
 
-export default function Page() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main>
       <Navbar />
 
-      <HeroSection />
+      <SectionHome />
 
-      <SkillsSection />
+      <SectionSkills />
 
-      <ProjectsSection />
+      <SectionProjects />
 
-      <YoutubeSection />
+      <SectionYoutube />
 
-      <ContactSection />
+      <SectionContacts />
     </main>
   );
 }

@@ -13,112 +13,91 @@ import { cn } from '@/lib/utils';
 import { animate, motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-export default function HeroSection() {
-  const MotionImage = motion(Image);
-
+export default function SectionHome() {
   return (
-    <div
-      id="home"
-      className={cn(
-        'grid mx-auto h-full uppercase pt-16',
-        'lg:grid-cols-[1fr_auto] lg:w-[1000px]',
-        'xl:w-[1240px]'
-      )}
-    >
+    <div className="overflow-x-hidden">
       <div
-        className={cn(
-          'relative h-[calc(100vh-80px-4rem)] overflow-x-hidden overflow-y-clip',
-          'lg:overflow-x-visible'
-        )}
+        id="home"
+        className={cn('container px-0 grid mx-auto uppercase pt-4', 'lg:grid-cols-[1fr_auto]')}
       >
-        <BgText className="top-30 -left-20">
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Sakib
-          </motion.div>
-        </BgText>
-        <BgText className="bottom-20 left-30">
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Ahmed
-          </motion.div>
-        </BgText>
+        <SakibDisplay />
 
-        <MotionImage
-          priority
-          src={sakibTransparent}
-          alt="sakib"
-          fill
-          transition={{ duration: 1 }}
-          initial={{ opacity: 0, scale: 1.2 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="object-contain object-bottom xl:object-contain"
-        />
-      </div>
-
-      <div className="flex flex-col bg-violet-200 items-center py-32 lg:bg-transparent lg:py-0 lg:items-end lg:justify-end lg:pb-40 xl:justify-normal xl:pb-0 gap-16">
-        <NavLinks />
-
-        <Intro />
-
-        <Stats />
-
-        <ContactButtons />
+        <SakibInfo />
       </div>
     </div>
   );
 }
 
-function NavLinks() {
+function SakibDisplay() {
+  const MotionImage = motion(Image);
+
   return (
-    <motion.div
-      className="hidden xl:flex flex-col gap-4 text-2xl text-right mb-8"
-      initial={{ opacity: 0, x: 10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.3, delay: 1 }}
+    <div
+      className={cn(
+        'relative aspect-[140/219] max-h-[calc(100vh-4rem-1rem)] w-full overflow-y-clip',
+        'sm:max-h-[calc(100vh-4rem-1rem-2rem)]'
+      )}
     >
-      <div>Skills</div>
-      <div>Projects</div>
-      <div>Youtube</div>
-      <div>Contact</div>
-    </motion.div>
+      <BgText className="top-30 -left-20">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Sakib
+        </motion.div>
+      </BgText>
+      <BgText className="bottom-20 left-30">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Ahmed
+        </motion.div>
+      </BgText>
+
+      <MotionImage
+        priority
+        src={sakibTransparent}
+        alt="sakib"
+        fill
+        transition={{ duration: 1 }}
+        initial={{ opacity: 0, scale: 1.2 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="object-contain object-bottom xl:object-contain"
+      />
+    </div>
+  );
+}
+
+function SakibInfo() {
+  return (
+    <div
+      className={cn(
+        'flex flex-col bg-violet-200 items-center py-16 gap-16 px-2',
+        'lg:bg-transparent lg:py-0 lg:items-end lg:justify-center lg:px-0 lg:pr-6'
+      )}
+    >
+      <Intro />
+
+      <Stats />
+
+      <ContactButtons />
+    </div>
   );
 }
 
 function Intro() {
   return (
     <motion.div
-      className="space-y-4 lg:text-right"
+      className={cn('space-y-4 text-violet-950')}
       initial={{ opacity: 0, x: 60 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-      <div className="text-5xl xl:text-7xl font-black">Sakib Ahmed</div>
-      <div style={{ paintOrder: 'stroke' }}>
-        <svg
-          className="h-[46px] w-[365px] xl:h-[78px] xl:w-[604px]"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <text
-            x={0}
-            y="70%"
-            stroke="black"
-            fill="white"
-            strokeWidth={6}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-4xl xl:text-6xl"
-          >
-            Mobile Developer
-          </text>
-        </svg>
-      </div>
+      <div className="text-violet-600 title-big lg:text-right">Sakib Ahmed</div>
+      <div className="title-mid lg:text-right">Mobile Developer</div>
     </motion.div>
   );
 }
@@ -148,7 +127,7 @@ function Stats() {
 
   return (
     <motion.div
-      className="flex gap-10 font-black"
+      className="flex flex-wrap justify-center gap-10 font-black text-violet-950"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.5 }}
@@ -172,7 +151,7 @@ function Stats() {
 function ContactButtons() {
   return (
     <motion.div
-      className="flex gap-8 items-center"
+      className="flex gap-8 items-center lg:pr-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 1.2 }}
