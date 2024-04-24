@@ -97,7 +97,7 @@ function Intro() {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="text-violet-600 title-big lg:text-right">Sakib Ahmed</div>
-      <div className="title-mid lg:text-right">Mobile Developer</div>
+      <div className="title-mid lg:text-right">Flutter Developer</div>
     </motion.div>
   );
 }

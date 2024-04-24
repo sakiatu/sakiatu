@@ -16,7 +16,7 @@ const fontBG = Keania_One({
 });
 
 export const metadata: Metadata = {
-  title: 'Sakib Ahmed - Developer',
+  title: 'Sakib Ahmed - Flutter Developer',
   description: 'Portfolio of Md. Sakib Ahmed Tushar',
 };
 
